@@ -30,9 +30,7 @@ function Technologies({techPromises}) {
            </div>
             <div  className="col-span-4 ">
                 
-                {/* {
-                    technologies.map((tech,idx:number)=><SelectedTech  key ={idx} techPromises={techPromises} tech={tech} isTech={isTech} setIsTech={setIsTech}></SelectedTech>)
-                } */}
+              
 
                 <SelectedTech 
                 isTech={isTech}

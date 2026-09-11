@@ -3,6 +3,7 @@ import './App.css'
 import Banner from './Components/Banner'
 import Navbar from './Components/Navbar'
 import Technologies from './Components/Technologies'
+import Footer from './Components/Footer'
 
 function App() {
 
@@ -23,6 +24,7 @@ function App() {
          <Suspense fallback={<p>Loading....</p>}>
           <Technologies techPromises={techPromises()}></Technologies>
          </Suspense>
+         <Footer></Footer>
       </div>
       
     </>
