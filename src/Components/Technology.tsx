@@ -1,10 +1,16 @@
 import React from 'react';
 
 function Technology({tech,techPromises,isTech,setIsTech}) {
+     const isAdded = isTech.some((item) => item.id === tech.id);
+      // Already added
+       
 
     const handleClick=()=>{
 
+       
+
         setIsTech([...isTech,tech])
+     
 
     }
     return (
@@ -61,13 +67,18 @@ function Technology({tech,techPromises,isTech,setIsTech}) {
       </div>
 
     
-      <button onClick={()=>handleClick()}
-        type="button"
-        className="mt-5 w-full rounded-lg bg-slate-950 py-3 text-sm font-medium text-white transition hover:bg-slate-800"
-      >
-        Add to Stack
-      </button>
-
+     <button
+                    onClick={handleClick}
+                    type="button"
+                    disabled={isAdded}
+                    className={`mt-5 w-full rounded-lg py-3 text-sm font-medium transition ${
+                        isAdded
+                            ? "cursor-not-allowed bg-green-100 text-green-600"
+                            : "bg-slate-950 text-white hover:bg-slate-800"
+                    }`}
+                >
+                    {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+                </button>
     </div>
         </div>
         

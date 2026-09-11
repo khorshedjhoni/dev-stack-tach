@@ -1,4 +1,3 @@
-import React from 'react';
 
 import footerImg from '../assets/logo-text.png'
 
@@ -39,9 +38,9 @@ function Footer() {
   </nav>
         
 </footer>
-<div className='flex justify-between gap-4 px-10'>
+<div className='flex justify-between gap-4 px-10 text-gray-500'>
      <p>Copyright © {new Date().getFullYear()} - Dev Stack. All rights reserved.</p>
-     <div className='flex justify-between gap-4'>
+     <div className='flex justify-between gap-4 '>
         <p>Privacy</p>
         <p>Terms</p>
      </div>
