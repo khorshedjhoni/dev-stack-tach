@@ -1,10 +1,9 @@
-import React from "react";
 import img from "../assets/logo-text.png";
 
-function Navbar(props) {
+function Navbar() {
   return (
     <div  className="sticky top-0 z-50 bg-white shadow-md">
-        <div className="flex justify-between items-center gap-x-2">
+        <div className="flex justify-between items-center gap-x-2 p-2">
       <div>
         <img src={img} alt="" />
       </div>
