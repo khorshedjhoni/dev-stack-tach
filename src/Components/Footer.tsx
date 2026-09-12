@@ -3,7 +3,7 @@ import footerImg from "../assets/logo-text.png";
 function Footer() {
   return (
     <div>
-      <footer className="footer mt-10 sm:footer-horizontal  text-base-content p-10">
+      <footer className="footer mt-10 sm:footer-horizontal  text-base-content p-10 bg-white shadow">
         <aside>
           <img
             src={footerImg}
@@ -19,9 +19,9 @@ function Footer() {
           </p>
 
           <div className="flex justify-around gap-2 items-start font-semibold mt-10">
-            <a href="">Github</a>
-            <a href="">Twitter</a>
-            <a href="">Linkedin</a>
+            <a href="https://github.com/">Github</a>
+            <a href="https://twitter.com/">Twitter</a>
+            <a href="https://www.linkedin.com/">Linkedin</a>
           </div>
         </aside>
         <nav>

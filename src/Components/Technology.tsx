@@ -31,7 +31,7 @@ function Technology({ tech, isTech, setIsTech }: TechProps) {
   };
   return (
     <div>
-      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md transition">
+      <div className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm hover:shadow-md ">
         <div className="flex items-start justify-between">
           <img
             src={tech.icon}

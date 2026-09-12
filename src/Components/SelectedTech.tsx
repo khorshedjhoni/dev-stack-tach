@@ -46,7 +46,7 @@ function SelectedTech({ isTech, setIsTech }:SelectedTechProps) {
       {isTech.length > 0 ? (
         <button
           onClick={handleRemoveAll}
-          className="m-4 w-[calc(100%-2rem)] rounded-xl border border-red-400 py-3 font-semibold text-red-500 hover:bg-red-50"
+         className="mx-4 my-4 rounded-xl border border-red-400 py-3 font-semibold text-red-500"
         >
           Remove All
         </button>
