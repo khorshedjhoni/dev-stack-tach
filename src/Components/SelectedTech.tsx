@@ -1,11 +1,13 @@
 import React, { use } from 'react';
 import SelectTechCard from './SelectTechCard';
+import { toast } from 'react-toastify';
 
 function SelectedTech({isTech,setIsTech}) {
     console.log(isTech)
 
     const handleRemoveAll = () => {
         setIsTech([]);
+        toast.success("Remove all successfully")
     };
 
     

@@ -1,4 +1,5 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 function Technology({tech,techPromises,isTech,setIsTech}) {
      const isAdded = isTech.some((item) => item.id === tech.id);
@@ -10,6 +11,8 @@ function Technology({tech,techPromises,isTech,setIsTech}) {
        
 
         setIsTech([...isTech,tech])
+
+        toast.success(`${tech.name} is successfully added`)
      
 
     }

@@ -4,6 +4,7 @@ import Banner from './Components/Banner'
 import Navbar from './Components/Navbar'
 import Technologies from './Components/Technologies'
 import Footer from './Components/Footer'
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -21,10 +22,11 @@ function App() {
       <div className='container mx-auto px-14 mt-2'>
          <Navbar></Navbar>
          <Banner></Banner>
-         <Suspense fallback={<p>Loading....</p>}>
+         <Suspense fallback={<span className="loading loading-spinner loading-xl"></span>}>
           <Technologies techPromises={techPromises()}></Technologies>
          </Suspense>
          <Footer></Footer>
+         <ToastContainer />
       </div>
       
     </>

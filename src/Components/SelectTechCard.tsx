@@ -1,10 +1,12 @@
 import React from 'react';
+import { toast } from 'react-toastify';
 
 function SelectTechCard({tec,isTech,setIsTech}) {
 
     const handleDelete=(id)=>{
        const remainingTech = isTech.filter((item) => item.id !== id);
         setIsTech(remainingTech)
+        toast.success(`${tec.name} is successfully delete`)
     }
     return (
         <div>
