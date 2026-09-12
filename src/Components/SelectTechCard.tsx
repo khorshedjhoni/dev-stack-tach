@@ -1,6 +1,7 @@
 import { type Dispatch, type SetStateAction } from "react";
 import { toast } from "react-toastify";
 import type { TechnologyProps } from "../type/type";
+import { RxCross2 } from "react-icons/rx";
 
 interface SelectedCardProps{
     tec:TechnologyProps
@@ -40,7 +41,7 @@ function SelectTechCard({ tec, isTech, setIsTech }:SelectedCardProps) {
             onClick={() => handleDelete(tec.id)}
             className="text-3xl font-light text-gray-400 hover:text-red-500"
           >
-            ×
+            <RxCross2 />
           </button>
         </div>
       </div>
