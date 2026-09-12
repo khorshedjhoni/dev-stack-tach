@@ -1,4 +1,4 @@
-import { use, useState, type Dispatch, type SetStateAction } from "react";
+import { use, useState } from "react";
 import Technology from "./Technology";
 import SelectedTech from "./SelectedTech";
 import type { TechnologyProps } from "../type/type";
