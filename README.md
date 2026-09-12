@@ -4,6 +4,8 @@
 
 Dev Stack is a responsive web application that allows users to explore different development technologies and build their own personalized technology stack. Users can view technology details and easily add or remove technologies from their stack.
 
+## Live link: https://dev-stack-tech.netlify.app/
+
 ## 🛠️ Technologies Used
 
 * React
