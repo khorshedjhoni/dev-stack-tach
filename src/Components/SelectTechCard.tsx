@@ -1,53 +1,51 @@
-import React from 'react';
-import { toast } from 'react-toastify';
+import { type Dispatch, type SetStateAction } from "react";
+import { toast } from "react-toastify";
+import type { TechnologyProps } from "../type/type";
 
-function SelectTechCard({tec,isTech,setIsTech}) {
+interface SelectedCardProps{
+    tec:TechnologyProps
+    isTech: TechnologyProps[];
+    setIsTech:Dispatch<SetStateAction<TechnologyProps[]>>
+}
 
-    const handleDelete=(id)=>{
-       const remainingTech = isTech.filter((item) => item.id !== id);
-        setIsTech(remainingTech)
-        toast.success(`${tec.name} is successfully delete`)
-    }
-    return (
-        <div>
-            <div className="flex items-center justify-between rounded-2xl border-2 border-gray-200 bg-white px-3 py-2">
-
-    {/* Left div */}
-    <div className="flex items-center gap-4">
-
-        {/* Technology icon */}
-        <img
+function SelectTechCard({ tec, isTech, setIsTech }:SelectedCardProps) {
+  const handleDelete = (id:number) => {
+    const remainingTech = isTech.filter((item) => item.id !== id);
+    setIsTech(remainingTech);
+    toast.success(`${tec.name} is successfully delete`);
+  };
+  return (
+    <div>
+      <div className="flex items-center justify-between rounded-2xl border-2 border-gray-200 bg-white px-3 py-2">
+        {/* Left div */}
+        <div className="flex items-center gap-4">
+          {/* Technology icon */}
+          <img
             src={tec.icon}
             alt={tec.name}
             className="h-12 w-12 object-contain"
-        />
+          />
 
-        {/* Name + Category */}
-        <div>
-            <h3 className="text-lg font-semibold text-gray-900">
-                {tec.name}
-            </h3>
+          {/* Name + Category */}
+          <div>
+            <h3 className="text-lg font-semibold text-gray-900">{tec.name}</h3>
 
-            <p className="text-sm text-gray-400">
-                {tec.category}
-            </p>
+            <p className="text-sm text-gray-400">{tec.category}</p>
+          </div>
         </div>
 
-    </div>
-
-    {/* Right div - Delete */}
-    <div>
-        <button
+        {/* Right div - Delete */}
+        <div>
+          <button
             onClick={() => handleDelete(tec.id)}
             className="text-3xl font-light text-gray-400 hover:text-red-500"
-        >
+          >
             ×
-        </button>
-    </div>
-
-</div>
+          </button>
         </div>
-    );
+      </div>
+    </div>
+  );
 }
 
 export default SelectTechCard;
