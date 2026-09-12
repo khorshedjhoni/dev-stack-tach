@@ -5,7 +5,7 @@ import type { TechnologyProps } from "../type/type";
 
 interface SelectedTechProps{
     isTech: TechnologyProps[];
-      setIsTech:Dispatch<SetStateAction<TechnologyProps[]>>
+    setIsTech:Dispatch<SetStateAction<TechnologyProps[]>>
 }
 
 function SelectedTech({ isTech, setIsTech }:SelectedTechProps) {

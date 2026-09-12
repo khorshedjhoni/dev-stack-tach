@@ -17,7 +17,7 @@ function Technologies({ techPromises }:TechnologiesProps) {
     <div>
       <div>
         <h1 className="font-bold text-4xl my-5 leading-3.5">
-          Explore the <span className="mt-5 block text-[#EC4899] sm:mt-0 sm:inline">Technologies</span>
+          Explore the <span className="mt-5 block text-[#EC4899] sm:mt-0 sm:inline text-brand-gradient">Technologies</span>
         </h1>
         <p className="mb-10 ">
           Pick one technology per category to build your ideal stack.

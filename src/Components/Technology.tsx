@@ -1,14 +1,15 @@
-import  { type Dispatch, type SetStateAction } from "react";
+import { type Dispatch, type SetStateAction } from "react";
 import { toast } from "react-toastify";
 import type { TechnologyProps } from "../type/type";
+import { IoCheckmarkSharp } from "react-icons/io5";
 
-interface TechProps{
+interface TechProps {
   tech: TechnologyProps;
   isTech: TechnologyProps[];
-  setIsTech:Dispatch<SetStateAction<TechnologyProps[]>>
+  setIsTech: Dispatch<SetStateAction<TechnologyProps[]>>;
 }
 
-function Technology({ tech,  isTech, setIsTech }:TechProps) {
+function Technology({ tech, isTech, setIsTech }: TechProps) {
   let isAdded = false;
 
   for (const item of isTech) {
@@ -18,8 +19,12 @@ function Technology({ tech,  isTech, setIsTech }:TechProps) {
     }
   }
 
-
   const handleClick = () => {
+
+    if (isAdded) {
+    toast.warn(`${tech.name} is already in your stack!`);
+    return;
+  }
     setIsTech([...isTech, tech]);
 
     toast.success(`${tech.name} is successfully added`);
@@ -41,7 +46,7 @@ function Technology({ tech,  isTech, setIsTech }:TechProps) {
 
         <h2 className="mt-5 text-2xl font-bold text-slate-900">{tech.name}</h2>
 
-        <p className="mt-3 min-h-[72px] text-[15px] leading-6 text-slate-500">
+        <p className="mt-3 min-h-18 text-[15px] leading-6 text-slate-500">
           {tech.description}
         </p>
 
@@ -64,13 +69,20 @@ function Technology({ tech,  isTech, setIsTech }:TechProps) {
           onClick={handleClick}
           type="button"
           disabled={isAdded}
-          className={`mt-5 w-full rounded-lg py-3 text-sm font-medium transition ${
+          className={`mt-5 flex items-center gap-1 justify-center w-full rounded-lg py-3 text-sm font-medium transition ${
             isAdded
-              ? "cursor-not-allowed bg-green-100 text-green-600"
+              ? " bg-green-100 text-green-600"
               : "bg-slate-950 text-white hover:bg-slate-800"
           }`}
         >
-          {isAdded ? "✓ Added to Stack" : "Add to Stack"}
+          {isAdded ? (
+            <>
+              <IoCheckmarkSharp className="text-center"/>
+              Added to Stack
+            </>
+          ) : (
+            "Add to Stack"
+          )}
         </button>
       </div>
     </div>

@@ -1,2 +1,10 @@
 @import "tailwindcss";
-@plugin "daisyui"
+@plugin "daisyui";
+
+:root {
+  --brand-gradient: linear-gradient(to right, #f97316, #ec4899, #8b5cf6);
+}
+
+@utility bg-brand-gradient {
+  background-image: var(--brand-gradient);
+}
